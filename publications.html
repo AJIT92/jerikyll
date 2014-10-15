@@ -1,0 +1,23 @@
+---
+layout: page
+title: Publications
+permalink: /publications/
+---
+
+<div class="home">
+
+	{% for publication in site.data.publications %}
+		<div class="pub-sec">
+			<div class="pub-year">{{ publication.year }}</div>
+
+			{% for entry in publication.entries %}
+				<div class="pub-entry">
+					<div class="pub-auth">{{ entry.author }}</div>
+					<div class="pub-full"><div class="pub-title">{{ entry.title }}</div> {{ entry.place }}</div>
+					<div class="pub-opt">{% if entry.view != empty %}[<a href="{{ entry.view }}">view</a>]{% endif %}{% if entry.bibtex != empty %}[<a href="{{ entry.bibtex }}">bibtex</a>]{% endif %}</div>
+				</div>
+			{% endfor %}
+		</div>
+	{% endfor %}
+
+</div>

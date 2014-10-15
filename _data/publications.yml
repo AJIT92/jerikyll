@@ -1,0 +1,41 @@
+- year: 2011
+  entries:
+      - author: Dy, J. B. S., & Azcarraga, A. P. (2011, March).
+        title: Using Random projection as Key Input Representation Scheme for K-means Clustering.
+        place: "In PCSC 2011: 11th Philippine Computing Science Congress."
+        view: ""
+        bibtex: ""
+
+      - author: Dy, J. B. S. (2011).
+        title: Keyword Extraction for Very High Dimensional Datasets using Random Projection as Key Input Representation Scheme.
+        place: Master's thesis, De La Salle University - Manila.
+        view: "https://docs.google.com/viewer?a=v&pid=explorer&chrome=true&srcid=0B960D4kxWzHmZjM4NTgxNGEtZjgxMi00ZjY2LThjNjgtMjgyM2RiN2U2OTQ5&hl=en"
+        bibtex: "https://docs.google.com/document/d/1DNuf7usSLS5KaUCcgJihwU9X04OrAOlnKs5qx3yWPeo/edit?hl=en&authkey=CPPOzqAK"
+
+- year: 2010
+  entries:
+      - author: Azcarraga, A. P., & Dy, J. B. S. (2010, March).
+        title: A Social Networking System for Medical Education and Training.
+        place: In Proceedings of Touchpoint 2010 1st International Conference on Technology in Education (p. 63-70).
+        view: "https://docs.google.com/viewer?a=v&pid=explorer&chrome=true&srcid=0B960D4kxWzHmMGJkZGMwYTctMjRiOC00N2ViLWEwOGMtNjE4N2Q3Y2E1NmJm&hl=en"
+        bibtex: "https://docs.google.com/document/d/1TQPCPShmzDqCjPLav5UOWSB5cnd7sV1Jdk1z-HF9HgU/edit?hl=en&authkey=CLnj2pkN"
+
+      - author: Chiu, C. V. R., Dy, J. B. S., Lee, P. J. E., Liu, M. D. S., & Azcarraga, A. P. (2010, March).
+        title: Idea Generation using Web-based Collaborative Decision-Making System.
+        place: "In PCSC 2010: 10th Philippine Computing Science Congress."
+        view: "https://docs.google.com/viewer?a=v&pid=explorer&chrome=true&srcid=0B960D4kxWzHmYWRkMjU0NDMtZTNiNC00OTY0LTlmYjMtMGRkMmI3Mzk2ZGM0&hl=en"
+        bibtex: "https://docs.google.com/document/d/19dsujX-_5NN-D7-y7kYhtSX0Iv_721UhqqwGGEpznps/edit?hl=en&authkey=CKLazJEI"
+
+      - author: Dy, J. B. S., Liu, M. D., Syliongka, L. R., Laureano, P., & Roxas, R. E. (2010, March).
+        title: "MDDT: Model Driven Development Tool as Aid for Learning Programming Fundamentals."
+        place: "In PCSC 2010: 10th Philippine Computing Science Congress."
+        view: "https://docs.google.com/viewer?a=v&pid=explorer&chrome=true&srcid=0B960D4kxWzHmMGNmNWUyMjItMjI5MC00NDc2LThhMTMtMTM4MGM0NDJhODMw&hl=en"
+        bibtex: "https://docs.google.com/document/d/13CTygwWGmO9SFUmYMpuuuxNomPD9M4LoH4I8VEEbHEY/edit?hl=en&authkey=CP_yiaMC"
+
+- year: 2009
+  entries:
+      - author: Chiu, C. V. R., Dy, J. B. S., Lee, P. J. E., & Liu, M. D. S. (2009, October).
+        title: Collaborative Decision Support System.
+        place: De La Salle University - Manila. (Undergraduate thesis)
+        view: ""
+        bibtex: "https://docs.google.com/document/d/1-BzIRJV5MrDdl7A-p4R77bJk7LbcZ5_sRJ1w3rVNhr8/edit?hl=en&authkey=CNmWoe8K"
