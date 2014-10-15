@@ -4,6 +4,9 @@ title: Publications
 permalink: /publications/
 additional:
     css: /css/publications.css
+    js:
+      - /js/jquery-2.1.1.min.js
+      - /js/publications.js
 ---
 
 <div class="home">
@@ -16,7 +19,14 @@ additional:
 				<div class="pub-entry">
 					<div class="pub-auth">{{ entry.author }}</div>
 					<div class="pub-full"><div class="pub-title">{{ entry.title }}</div> {{ entry.place }}</div>
-					<div class="pub-opt">{% if entry.view != empty %}[<a href="{{ entry.view }}">view</a>]{% endif %}{% if entry.bibtex != empty %}[<a href="{{ entry.bibtex }}">bibtex</a>]{% endif %}</div>
+					<div class="pub-opt">{% if entry.view %}[<a href="{{ entry.view }}">view</a>]{% endif %}{% if entry.bibtex %}[<a class="btn-bibtex" data-link="{{ publication.year }}_{{ forloop.index }}" href="{{ entry.bibtex }}">bibtex</a>]{% endif %}</div>
+					{% if entry.bibtex_raw %}
+						<div id="{{ publication.year }}_{{ forloop.index }}" style="display: none;">
+							{% highlight tex %}
+								{{ entry.bibtex_raw }}
+							{% endhighlight %}
+						</div>
+					{% endif %}
 				</div>
 			{% endfor %}
 		</div>

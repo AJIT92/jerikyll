@@ -13,5 +13,8 @@
 	{% for css in page.additional.css %}
 		<link rel="stylesheet" href="{{ css | prepend: site.baseurl }}">
 	{% endfor %}
+	{% for js in page.additional.js %}
+		<script type="text/javascript" src="{{ js | prepend: site.baseurl }}"></script>
+	{% endfor %}
 	<link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
 </head>

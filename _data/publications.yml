@@ -3,14 +3,21 @@
       - author: Dy, J. B. S., & Azcarraga, A. P. (2011, March).
         title: Using Random projection as Key Input Representation Scheme for K-means Clustering.
         place: "In PCSC 2011: 11th Philippine Computing Science Congress."
-        view: ""
-        bibtex: ""
 
       - author: Dy, J. B. S. (2011).
         title: Keyword Extraction for Very High Dimensional Datasets using Random Projection as Key Input Representation Scheme.
         place: Master's thesis, De La Salle University - Manila.
         view: "https://docs.google.com/viewer?a=v&pid=explorer&chrome=true&srcid=0B960D4kxWzHmZjM4NTgxNGEtZjgxMi00ZjY2LThjNjgtMjgyM2RiN2U2OTQ5&hl=en"
         bibtex: "https://docs.google.com/document/d/1DNuf7usSLS5KaUCcgJihwU9X04OrAOlnKs5qx3yWPeo/edit?hl=en&authkey=CPPOzqAK"
+        bibtex_raw: |
+            @MastersThesis{kwex,
+                author = {Jeric Bryle S. Dy},
+                title = "{Keyword Extraction for Very High Dimensional Datasets using Random Projection as Key Input Representation Scheme}",
+                school = {De La Salle University - Manila},
+                year = {2011},
+                OPTmonth = {January}
+            }
+
 
 - year: 2010
   entries:
@@ -19,23 +26,62 @@
         place: In Proceedings of Touchpoint 2010 1st International Conference on Technology in Education (p. 63-70).
         view: "https://docs.google.com/viewer?a=v&pid=explorer&chrome=true&srcid=0B960D4kxWzHmMGJkZGMwYTctMjRiOC00N2ViLWEwOGMtNjE4N2Q3Y2E1NmJm&hl=en"
         bibtex: "https://docs.google.com/document/d/1TQPCPShmzDqCjPLav5UOWSB5cnd7sV1Jdk1z-HF9HgU/edit?hl=en&authkey=CLnj2pkN"
+        bibtex_raw: |
+            @InProceedings{snsmet,
+                author = {Arnulfo P. Azcarraga and Jeric Bryle S. Dy},
+                title = "{A Social Networking System for Medical Education and Training}",
+                booktitle = "{Proceedings of Touchpoint 2010 1st International Conference on Technology in Education}",
+                pages = {63-70},
+                year = {2010},
+                month = {March},
+                ISSN = {2094-4918}
+            }
 
       - author: Chiu, C. V. R., Dy, J. B. S., Lee, P. J. E., Liu, M. D. S., & Azcarraga, A. P. (2010, March).
         title: Idea Generation using Web-based Collaborative Decision-Making System.
         place: "In PCSC 2010: 10th Philippine Computing Science Congress."
         view: "https://docs.google.com/viewer?a=v&pid=explorer&chrome=true&srcid=0B960D4kxWzHmYWRkMjU0NDMtZTNiNC00OTY0LTlmYjMtMGRkMmI3Mzk2ZGM0&hl=en"
         bibtex: "https://docs.google.com/document/d/19dsujX-_5NN-D7-y7kYhtSX0Iv_721UhqqwGGEpznps/edit?hl=en&authkey=CKLazJEI"
+        bibtex_raw: |
+            @InProceedings{idea_gen,
+                author = {Christian Valeen R. Chiu and Jeric Bryle S. Dy and Peter John E. Lee and Michael David S. Liu and Arnulfo P. Azcarraga},
+                title = "{Idea Generation using Web-based Collaborative Decision-Making System}",
+                booktitle = "{PCSC 2010: 10th Philippine Computing Science Congress}",
+                year = "{2010}",
+                organization = "{Computing Society of the Philippines (CSP)}",
+                month = {March}
+            }
 
       - author: Dy, J. B. S., Liu, M. D., Syliongka, L. R., Laureano, P., & Roxas, R. E. (2010, March).
         title: "MDDT: Model Driven Development Tool as Aid for Learning Programming Fundamentals."
         place: "In PCSC 2010: 10th Philippine Computing Science Congress."
         view: "https://docs.google.com/viewer?a=v&pid=explorer&chrome=true&srcid=0B960D4kxWzHmMGNmNWUyMjItMjI5MC00NDc2LThhMTMtMTM4MGM0NDJhODMw&hl=en"
         bibtex: "https://docs.google.com/document/d/13CTygwWGmO9SFUmYMpuuuxNomPD9M4LoH4I8VEEbHEY/edit?hl=en&authkey=CP_yiaMC"
+        bibtex_raw: |
+            @InProceedings{mddt,
+                author = {Jeric Bryle S. Dy and Michael David Liu and Leif Romeritch Syliongka and Philip Laureano and Rachel Edita Roxas},
+                title = "{MDDT: Model Driven Development Tool as Aid for Learning Programming Fundamentals}",
+                booktitle = "{PCSC 2010: 10th Philippine Computing Science Congress}",
+                year = "{2010}",
+                organization = "{Computing Society of the Philippines (CSP)}",
+                month = {March}
+            }
+
 
 - year: 2009
   entries:
       - author: Chiu, C. V. R., Dy, J. B. S., Lee, P. J. E., & Liu, M. D. S. (2009, October).
         title: Collaborative Decision Support System.
         place: De La Salle University - Manila. (Undergraduate thesis)
-        view: ""
         bibtex: "https://docs.google.com/document/d/1-BzIRJV5MrDdl7A-p4R77bJk7LbcZ5_sRJ1w3rVNhr8/edit?hl=en&authkey=CNmWoe8K"
+        bibtex_raw: |
+            @misc{cdll_codes,
+                author = {Christian Valeen R. Chiu and Jeric Bryle S. Dy and Peter John E. Lee and Michael David S. Liu},
+                title = "{Collaborative Decision Support System}",
+                howpublished = {De La Salle University - Manila},
+                school = {De La Salle University - Manila},
+                year = {2009},
+                month = {October},
+                note = {Undergraduate Thesis},
+            }
+

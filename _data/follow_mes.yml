@@ -1,0 +1,31 @@
+- title: LinkedIn
+  icon: "https://www.linkedin.com/favicon.ico"
+  url: "https://www.linkedin.com/in/jericdy"
+
+- title: NUS Site
+  icon: "http://www.comp.nus.edu.sg/favicon.ico"
+  url: "http://www.comp.nus.edu.sg/~jeric/"
+
+- title: YouTube
+  icon: "https://www.youtube.com/favicon.ico"
+  url: "https://www.youtube.com/user/jericbryledy"
+
+- title: Blog
+  icon: "https://blogger.com/favicon.ico"
+  url: "http://blog.jericdy.com"
+
+- title: Twitter
+  icon: "https://twitter.com/favicon.ico"
+  url: "https://twitter.com/jericbryledy"
+
+- title: Google+
+  icon: "https://plus.google.com/favicon.ico"
+  url: "https://plus.google.com/+JericBryleDy"
+
+- title: Facebook
+  icon: "https://www.facebook.com/favicon.ico"
+  url: "https://www.facebook.com/jericdy"
+
+- title: GitHub
+  icon: "https://github.com/favicon.ico"
+  url: "https://github.com/jericbryledy"
