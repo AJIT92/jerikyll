@@ -8,6 +8,11 @@ layout: default
 	</header>
 
 	<article class="post-content">
+		{% if page.video %}
+			<div class="video-container">
+				<iframe src="//www.youtube.com/embed/{{ page.video }}" frameborder="0" allowfullscreen></iframe>
+			</div>
+		{% endif %}
 		{{ content }}
 	</article>
 
