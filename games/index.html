@@ -13,15 +13,13 @@ additional:
 	<ul class="post-list">
 		{% for post in site.posts %}
 			<li>
-				<span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
-
 				<h2>
-					<a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+					<a class="post-link" href="/games/rockmandashfangame/">Mega Man Legends: Operation Mother lode</a>
+					<a class="post-link" href="/games/graphix/">Mega Man Legends</a>
+					<a class="post-link" href="/games/sworld/">Sworld</a>
 				</h2>
 			</li>
 		{% endfor %}
 	</ul>
-
-	<p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
 
 </div>
