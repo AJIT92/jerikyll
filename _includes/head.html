@@ -11,12 +11,15 @@
 	
 	<link rel="stylesheet" href="{{ "/css/bootstrap.min.css" | prepend: site.baseurl }}">
 	<link rel="stylesheet" href="{{ "/css/bootstrap-theme.min.css" | prepend: site.baseurl }}">
+	<link rel="stylesheet" href="{{ "/css/magnific-popup.css" | prepend: site.baseurl }}">
 	<link rel="stylesheet" href="{{ "/css/main.css" | prepend: site.baseurl }}">
 	{% for css in page.additional.css %}
 		<link rel="stylesheet" href="{{ css | prepend: site.baseurl }}">
 	{% endfor %}
 	<script type="text/javascript" src="{{ "/js/jquery-2.1.1.min.js" | prepend: site.baseurl }}"></script>
 	<script type="text/javascript" src="{{ "/js/bootstrap.min.js" | prepend: site.baseurl }}"></script>
+	<script type="text/javascript" src="{{ "/js/jquery.magnific-popup.min.js" | prepend: site.baseurl }}"></script>
+	<script type="text/javascript" src="{{ "/js/main.js" | prepend: site.baseurl }}"></script>
 	{% for js in page.additional.js %}
 		<script type="text/javascript" src="{{ js | prepend: site.baseurl }}"></script>
 	{% endfor %}
