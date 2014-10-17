@@ -3,21 +3,33 @@ layout: page
 title: Games
 permalink: /games/
 additional:
-js: /js/jquery-2.1.1.min.js
+    css: /css/games.css
+    js: /js/games.js
 ---
 
 <div class="home">
 
-	<h1 class="page-heading">Game selection!</h1>
-
-	<ul class="post-list">
-		<li>
-			<h2>
-				<a class="post-link" href="/games/rockmandashfangame/">Mega Man Legends: Operation Mother lode</a>
-				<a class="post-link" href="/games/graphix/">Mega Man Legends</a>
-				<a class="post-link" href="/games/sworld/">Sworld</a>
-			</h2>
-		</li>
-	</ul>
+	<div class="item-spacer">
+		<h1 class="page-heading">Game selection!</h1>
+		<div id="gameSelect" class="carousel slide" data-ride="carousel" data-interval="false">
+			<div class="carousel-inner">
+				{% for game in site.data.games %}
+				<div class="item{% if forloop.index == 1 %} active{% endif %}" data-link="{{ game.link | prepend: site.baseurl }}" data-info="{{ game.info | xml_escape }}" data-img-arr='{{ game.imgArr | jsonify }}'>
+					<div class="selection-title"><a href="{{ game.link | prepend: site.baseurl }}">{{ game.title }}</a></div>
+				</div>
+				{% endfor %}
+			</div>
+			<a class="left carousel-control clean-navi" href="#gameSelect" role="button" data-slide="prev"><span class="glyphicon glyphicon-chevron-left"></span></a>
+			<a class="right carousel-control clean-navi" href="#gameSelect" role="button" data-slide="next"><span class="glyphicon glyphicon-chevron-right"></span></a>
+		</div>
+	</div>
+	<div class="item-spacer">
+		<h1 class="page-heading">Information</h1>
+		<div id="game-info"></div>
+	</div>
+	<div class="item-spacer">
+		<h1 class="page-heading">Screenshots</h1>
+		<div id="game-thumbs" class="container-fluid"></div>
+	</div>
 
 </div>

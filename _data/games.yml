@@ -1,0 +1,39 @@
+- title: "Mega Man Legends: Operation Mother Lode"
+  link: /games/rockmandashfangame/
+  imgArr:
+    - /images/games/rockmandashfangame/hanmuru-front.png
+  info: |
+    My first game using DirectX.
+    I use <a href="http://www.blender.org/">Blender</a> to create and animate the 3D models.
+    This project is currently on hiatus.
+    
+    <a href="/games/rockmandashfangame/">Read more</a>
+
+- title: Mega Man Legends (school project)
+  link: /games/graphix/
+  imgArr:
+    - /images/games/graphix/graphix-start.png
+    - /images/games/graphix/graphix-servbots.png
+    - /images/games/graphix/graphix-tanks.png
+    - /images/games/graphix/graphix-homing.png
+    - /images/games/graphix/graphix-tornado.png
+    - /images/games/graphix/graphix-lv3.png
+  info: |
+    My first game using OpenGL.
+    It is for my computer graphics class in De La Salle University.
+    This project took me less than a month for this.
+    All 3D models were calculated by hand and hard coded inside.
+    
+    <a href="/games/graphix/">Read more</a>
+
+- title: Sworld
+  link: /games/sworld/
+  imgArr:
+    - /images/games/sworld/sworld-menu.png
+    - /images/games/sworld/sworld-fight.png
+  info: |
+    My first game written in Java.
+    I did not use any graphics library, everything is rendered with Java's Graphics2D and BufferedImage.
+    This project took me 2 weeks to produce.
+    
+    <a href="/games/sworld/">Read more</a>
