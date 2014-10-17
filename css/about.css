@@ -1,0 +1,18 @@
+
+.edu-program {
+	font-weight: bold;
+}
+
+.edu-school::before {
+	content: "\2937";
+}
+
+.edu-entry {
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+.section-content {
+	padding-left: 30px;
+	padding-right: 30px;
+}
