@@ -2,6 +2,11 @@
   link: /games/rockmandashfangame/
   imgArr:
     - /images/games/rockmandashfangame/hanmuru-front.png
+    - /images/games/rockmandashfangame/house.png
+    - /images/games/rockmandashfangame/fire-horokko.png
+    - /images/games/rockmandashfangame/rm-getting-up.png
+    - /images/games/rockmandashfangame/refractors.png
+    - /images/games/rockmandashfangame/servbot-happy.png
   info: |
     My first game using DirectX.
     I use <a href="http://www.blender.org/">Blender</a> to create and animate the 3D models.
