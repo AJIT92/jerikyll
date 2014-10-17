@@ -247,3 +247,33 @@ pre {
 	text-align: center;
 	font-size: smaller;
 }
+
+
+
+/**
+ * Update
+ */
+.update-item {
+	display: inline-block;
+	width: 100%;
+	height: 100%;
+}
+
+.update-item:hover {
+	text-decoration: none;
+}
+
+.update-thumb {
+	width: 100px;
+	height: 100px;
+	overflow: hidden;
+}
+
+.update-title {
+	color: #000;
+}
+
+.update-meta {
+	font-size: smaller;
+	color: #828282;
+}

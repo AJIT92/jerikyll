@@ -24,16 +24,39 @@ video: videoseries?list=PLDDE357530387535D
 		</div>
 	</div>
 	<div>
-		<ul class="post-list">
-			{% for post in site.categories["rockmandashfangame"] %}
-				<li>
-					<span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
-
-					<h2>
-						<a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-					</h2>
-				</li>
-			{% endfor %}
-		</ul>
+		<table class="table table-hover">
+			<thead>
+				<th colspan="2">Updates</th>
+			</thead>
+			<tbody>
+				{% for post in site.categories["rockmandashfangame"] %}
+					<tr>
+						<td>
+							{% if post.thumbnail %}
+								<a class="image-zoom" href="{{ post.thumbnail | prepend: site.baseurl }}">
+									<div class="update-thumb">
+										<img src="{{ post.thumbnail | prepend: site.baseurl }}" />
+									</div>
+								</a>
+							{% else %}
+								<a href="{{ post.url | prepend: site.baseurl }}">
+									<div class="update-thumb">
+										
+									</div>
+								</a>
+							{% endif %}
+						</td>
+						<td>
+							<a class="update-item" href="{{ post.url | prepend: site.baseurl }}">
+								<div>
+									<div class="update-title">{{ post.title }}</div>
+									<div class="update-meta">{{ post.date | date: "%b %-d, %Y" }}</div>
+								</div>
+							</a>
+						</td>
+					</tr>
+				{% endfor %}
+			</tbody>
+		</table>
 	</div>
 </div>
