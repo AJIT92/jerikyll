@@ -9,7 +9,7 @@
 					{% for follow_me in site.data.follow_mes %}
 						<a href="{{ follow_me.url }}" title="{{ follow_me.title }}">
 							<div class="follow-entry">
-								<img src="{{ follow_me.icon }}" width="16" height="16" />
+								<img src="{{ follow_me.icon | prepend: site.baseurl }}" width="16" height="16" />
 							</div>
 						</a>
 					{% endfor %}

@@ -11,5 +11,11 @@ layout: default
 	<article class="post-content">
 		{{ content }}
 	</article>
+	<div class="g-comments"
+		data-href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}"
+		data-width="642"
+		data-first_party_property="BLOGGER"
+		data-view_type="FILTERED_POSTMOD">
+	</div>
 
 </div>
