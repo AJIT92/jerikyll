@@ -13,6 +13,7 @@
 .carousel-control.left,
 .carousel-control.right {
 	background-image: none;
+	color: #111;
 }
 
 .carousel-indicators li {

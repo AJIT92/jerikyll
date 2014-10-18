@@ -238,3 +238,31 @@
 		}
 	}
 }
+
+.footer-title {
+	font-size: large;
+}
+
+.follow-entry {
+	display: inline;
+}
+
+.follow-entry:hover{
+}
+
+.social-entry {
+	display: inline-block;
+	vertical-align: top;
+}
+
+.social-entry .gplus {
+	padding-top: 4px;
+}
+
+.social-entry .facebook {
+	padding-top: 0px;
+}
+
+.social-entry .twitter {
+	padding-top: 4px;
+}
