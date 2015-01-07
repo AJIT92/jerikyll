@@ -1,0 +1,132 @@
+---
+layout: post
+title: Ubuntu 10.4 on VMware Issue Workaround
+date: 2010-07-03 00:00:00
+categories: blog
+thumbnail: /images/blog/vmware-ubuntu-10.4-17.png
+
+redirect_from: /blog/2010/07/ubuntu-104-on-vmware-issue-workaround.html
+comment_url: http://blog.jericdy.com/2010/07/ubuntu-104-on-vmware-issue-workaround.html
+---
+
+<p>
+	As some of you may already know, there's an issue when installing ubuntu 10.4 on VMware.
+	After installing, Ubuntu won't detect you're keyboard.
+	When you try to use the on-screen keyboard, the window crashes.
+	You can't do anything to login.
+	I've tried searching for answer but didn't find anything, I tried a lot of stuff and and finally was able to come up with a workaround.
+	The solution is simple, don't use the <i>Easy Install</i> option by VMware, just install the OS manually.
+</p>
+
+<p>
+	Here's a step by step tutorial (with screenshots to help newbies), just click on the images to enlarge...
+</p>
+
+<p>
+	First, create a new virtual machine (File->New->Virtual Machine or Ctrl+N).
+</p>
+
+{% include image.html image_url="/images/blog/vmware-ubuntu-10.4-1.png" %}
+
+<p>
+	Choose typical then click next.
+</p>
+
+{% include image.html image_url="/images/blog/vmware-ubuntu-10.4-2.png" %}
+
+<p>
+	You must select "I will install the operating system later" so Easy Install option will not bother you.
+</p>
+
+{% include image.html image_url="/images/blog/vmware-ubuntu-10.4-3.png" %}
+
+<p>
+	Select Linux just in case you don't know yet.
+</p>
+
+{% include image.html image_url="/images/blog/vmware-ubuntu-10.4-4.png" %}
+
+<p>
+	Enter the machine name and the path of the virtual HDD and preferences would be stored.
+</p>
+
+{% include image.html image_url="/images/blog/vmware-ubuntu-10.4-5.png" %}
+
+<p>
+	Enter the maximum HDD capacity for your virtual HDD. It can later be changed via "vmware-vdiskmanager -x option" ex. "vmware-vdiskmanager.exe -x 30Gb hdd.vmdk".
+</p>
+
+{% include image.html image_url="/images/blog/vmware-ubuntu-10.4-6.png" %}
+
+<p>
+	Customize the hardware if you want then click finish.
+</p>
+
+{% include image.html image_url="/images/blog/vmware-ubuntu-10.4-7.png" %}
+
+<p>
+	Click "Edit virtual machine settings"...
+</p>
+
+{% include image.html image_url="/images/blog/vmware-ubuntu-10.4-8.png" %}
+
+<p>
+	Select CD/DVD (IDE) on the left pane, then on the right pane, if you have the disc, select the physical drive or if you have the ISO file select "use ISO image file".
+</p>
+
+<p>
+	Now click ok then click "Power on this virtual machine". Wait for a while.
+</p>
+
+{% include image.html image_url="/images/blog/vmware-ubuntu-10.4-9.png" %}
+
+<p>
+	Click install Ubuntu...
+</p>
+
+{% include image.html image_url="/images/blog/vmware-ubuntu-10.4-10.png" %}
+
+<p>
+	Select where you live...
+</p>
+
+{% include image.html image_url="/images/blog/vmware-ubuntu-10.4-11.png" %}
+
+<p>
+	You should be able to type here... or select another keyboard if not...
+</p>
+
+{% include image.html image_url="/images/blog/vmware-ubuntu-10.4-12.png" %}
+
+<p>
+	Forward if you don't want to partition...
+</p>
+
+{% include image.html image_url="/images/blog/vmware-ubuntu-10.4-13.png" %}
+
+<p>Account setup...</p>
+
+{% include image.html image_url="/images/blog/vmware-ubuntu-10.4-14.png" %}
+
+<p>
+	And finally, click install and find something else to do.
+</p>
+
+{% include image.html image_url="/images/blog/vmware-ubuntu-10.4-16.png" %}
+
+<p>
+	After installation, you should be able to type on the password unlike before...
+</p>
+
+{% include image.html image_url="/images/blog/vmware-ubuntu-10.4-17.png" %}
+
+<p>
+	And yehey! You're in!
+</p>
+
+{% include image.html image_url="/images/blog/vmware-ubuntu-10.4-18.png" %}
+
+<p>
+	Hope this helps.
+	If you've read every single word and not just click Forward, Forward, Forward... boy, you must be really bored. hahaha.
+</p>

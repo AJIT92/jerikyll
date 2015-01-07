@@ -12,7 +12,11 @@ layout: default
 		{{ content }}
 	</article>
 	<div class="g-comments"
-		data-href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}"
+		{% if page.comment_url %}
+			data-href="{{ page.comment_url }}"
+		{% else %}
+			data-href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}"
+		{% endif %}
 		data-width="642"
 		data-first_party_property="BLOGGER"
 		data-view_type="FILTERED_POSTMOD">
