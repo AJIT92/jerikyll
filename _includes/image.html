@@ -3,4 +3,7 @@
 	<a class="image-zoom" href="{{ include.image_url | prepend: site.baseurl }}">
 		<img class="img-responsive image-center" src="{{ include.image_url | prepend: site.baseurl }}" />
 	</a>
+	{% if include.caption %}
+		<div class="item-caption">{{ include.caption }}</div>
+	{% endif %}
 </div>
