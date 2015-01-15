@@ -1,4 +1,15 @@
 
-<div class="video-container item-spacer">
+{% if include.inline != true %}
+	<div class="item-spacer">
+{% endif %}
+
+<div class="video-container">
 	<iframe src="//www.youtube.com/embed/{{ include.youtube_id }}" frameborder="0" allowfullscreen></iframe>
 </div>
+{% if include.caption %}
+	<div class="item-caption">{{ include.caption }}</div>
+{% endif %}
+
+{% if include.inline != true %}
+	</div>
+{% endif %}
