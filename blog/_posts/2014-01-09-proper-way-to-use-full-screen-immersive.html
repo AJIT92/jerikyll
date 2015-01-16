@@ -1,0 +1,106 @@
+---
+layout: post
+title: Proper way to use full-screen immersive mode on Android KitKat (4.4) and up
+date: 2014-01-09 12:16:00
+categories: blog
+thumbnail: /images/blog/sonic-dash-navbar.png
+
+redirect_from: /blog/2014/01/proper-way-to-use-full-screen-immersive.html
+---
+
+<p class="note">
+	Update (June 11, 2014):
+	Google has fixed this problem since Android 4.4.3. Adjusting the volume won't break the <code>SYSTEM_UI_FLAG_IMMERSIVE_STICKY</code> mode anymore. I would still recommend doing the work around since not everyone have updated to 4.4.3.
+</p>
+
+<p>
+	So I finally decided to blog about this.
+	I discovered this possible common mistake the same day I got my Android KitKat update on my Nexus 7 (2013).
+	I just wanted to make sure that it IS a common mistake until I post such thing,
+		because it could also be an Android bug as well.
+	Well today, I can confirm that it is in fact a bug.
+</p>
+
+<p>
+	I've been playing around with one of the new features in Android KitKat,
+		the <a href="http://developer.android.com/about/versions/kitkat.html#44-immersive">full-screen immersive mode</a>.
+	So according to the <a href="http://developer.android.com/about/versions/android-4.4.html#UI">documentation</a>,
+		to enter the new full-screen immersive mode we must call:
+</p>
+
+{% highlight java %}
+	setSystemUiVisibility(View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY | View.SYSTEM_UI_FLAG_HIDE_NAVIGATION);
+{% endhighlight %}
+
+<p>
+	after calling that, you'll get:
+</p>
+
+{% include image.html caption="Sonic Dash" image_url="/images/blog/sonic-dash-ok.png" %}
+
+{% include image.html caption="KitKat easter egg / day dream" image_url="/images/blog/kitkat-daydream-ok.png" %}
+
+<p>
+	now that we're in immersive mode, to bring up the navigation bar (back, home, recent apps buttons) we swipe up from the bottom of the screen.
+	Swipe down from the top of the screen when we want the status bar.
+</p>
+
+{% include image.html image_url="/images/blog/sonic-dash-navbar.png" %}
+
+{% include image.html image_url="/images/blog/kitkat-daydream-navbar.png" %}
+
+<p>
+	since the flag's name is <code>SYSTEM_UI_FLAG_IMMERSIVE_STICKY</code> you know, "sticky" it should return to immersive mode after some time.
+	Of course it does that.
+</p>
+
+<p>
+	So here's the problem, when you press the volume keys, you'll get a volume slider panel popped up.
+	Unfortunately, the navigation bar also comes up.
+</p>
+
+{% include image.html image_url="/images/blog/sonic-dash-volume.png" %}
+
+{% include image.html image_url="/images/blog/kitkat-daydream-volume.png" %}
+
+<p>
+	You would think that it would return to full-screen immersive mode after some time since it's "sticky" but it won't.
+</p>
+
+{% include image.html image_url="/images/blog/sonic-dash-stuck.png" %}
+
+{% include image.html image_url="/images/blog/kitkat-daydream-stuck.png" %}
+
+<p>
+	Now this COULD be just a bug in Android. It might get fixed soon, but in the mean time here's a simple way to fix the problem.
+</p>
+
+<p>
+	After setting the system UI visibility above, we create a change listener.
+</p>
+
+{% highlight java %}
+private final Runnable hideSystemUiCallback = new Runnable() {
+    @Override
+    public void run() {
+        setSystemUiVisibility(View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY | View.SYSTEM_UI_FLAG_HIDE_NAVIGATION);
+    }
+};
+{% endhighlight %}
+
+{% highlight java %}
+setOnSystemUiVisibilityChangeListener(new View.OnSystemUiVisibilityChangeListener() {
+    @Override
+    public void onSystemUiVisibilityChange(int visibility) {
+        if ((visibility & (View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY | View.SYSTEM_UI_FLAG_HIDE_NAVIGATION)) == 0) {
+            hideSystemUiHandler.removeCallbacks(hideSystemUiCallback);
+            hideSystemUiHandler.postDelayed(hideSystemUiCallback, HIDE_SYSTEM_UI_DELAY_MILLI);
+        }
+    }
+});
+{% endhighlight %}
+
+<p>
+	It's similar to handling the low profile state before KitKat actually (<a href="https://android.googlesource.com/platform/tools/base/+/master/templates/activities/FullscreenActivity/root/src/app_package/FullscreenActivity.java.ftl">link</a>).
+	Anyway, hope you find this tip helpful!
+</p>

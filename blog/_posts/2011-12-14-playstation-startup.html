@@ -1,0 +1,68 @@
+---
+layout: post
+title: PlayStation Startup
+date: 2011-12-14 06:04:00
+categories: blog
+thumbnail: http://img.youtube.com/vi/WmbTVeLGUWo/hqdefault.jpg
+
+redirect_from: /blog/2011/12/playstation-startup.html
+comment_url: http://blog.jericdy.com/2011/12/playstation-startup.html
+---
+
+<p>
+	So I've been asked how I did my PlayStation startup screen on my work laptop.
+	It's actually just a video file playback during startup, you can have any video you want.
+</p>
+
+<p>
+	In my case, I used this <a href="http://www.youtube.com/watch?v=oAhvQoLpvsM">PlayStation Intro Video.</a>
+</p>
+
+<p>
+	Here are the few simple steps for video playback on startup:
+</p>
+
+<p>
+	First create a shell script:
+</p>
+
+startup.sh 
+{% highlight bash %}
+totem --fullscreen "video file name"
+sleep <time to close>
+totem --quit
+{% endhighlight %}
+
+{% include image.html caption="my PlayStation startup script" image_url="/images/blog/gedit-playstation.png" %}
+
+<p>
+	The first line calls Totem Media player to playback whatever video file you provided.
+	Don't forget the ampersand (&amp;) on the first line, so the script can continue
+		(or you have to manually close the media player in order to continue).
+	The second line tells the script to wait for a number of seconds before proceeding to the next line.
+	The third line is obvious, it closes the media player.
+</p>
+
+<p>
+	Next, if you're using Ubuntu, go to System -> Preferences -> Startup Applications and a window will pop up:
+</p>
+
+{% include image.html image_url="/images/blog/startup-preferences.png" %}
+
+<p>
+	You can remove the "GNOME Login Sound" so the startup sound won't play anymore.
+	Add a new startup application.
+	In my case, I didn't delete the "GNOME Login Sound", I just edited it.
+</p>
+
+{% include image.html image_url="/images/blog/edit-startup-program.png" %}
+
+<p>
+	Change the command to call the script you just created and you should be able to get something like this:
+</p>
+
+{% include video.html youtube_id="WmbTVeLGUWo" %}
+
+<p>
+	Enjoy.
+</p>
