@@ -1,12 +1,18 @@
 ---
 layout: default
+additional:
+    js: /js/post.js
+
 ---
 <div itemscope itemtype="http://schema.org/Blog" class="post">
 
+	<meta itemprop="image" content="{{ page.thumbnail | prepend: site.url }}" />
+	<meta itemprop="thumbnailUrl" content="{{ page.thumbnail | prepend: site.url }}" />
 	<header class="post-header">
 		<h1 itemprop="name" class="post-title">{{ page.title }}</h1>
 		<p class="post-meta">
-			<span>{{ page.date | date: "%b %-d, %Y" }}</span>
+			<meta itemprop="datePublished" content="{{ page.date | date_to_xmlschema }}" />
+			<span id="post-timestamp">{{ page.date | date: "%B %-d, %Y" }}</span>
 			•
 			<span itemscope itemprop="author" itemtype="http://schema.org/Person">
 				<span itemprop="givenName">Jeric Bryle</span>
@@ -14,9 +20,6 @@ layout: default
 			</span>
 			{% if page.meta %} • {{ page.meta }}{% endif %}
 		</p>
-		<meta itemprop="image" content="{{ page.thumbnail | prepend: site.url }}" />
-		<meta itemprop="thumbnailUrl" content="{{ page.thumbnail | prepend: site.url }}" />
-		<meta itemprop="datePublished" content="{{ page.date | date_to_xmlschema }}" />
 	</header>
 
 	<article class="post-content">
