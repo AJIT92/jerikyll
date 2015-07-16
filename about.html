@@ -3,11 +3,11 @@ layout: page
 title: About
 permalink: /about/
 additional:
-    css: /css/about.css
+css: /css/about.css
 
 redirect_from:
-    - "/about-me/"
-    - "/contact-me/"
+- "/about-me/"
+- "/contact-me/"
 ---
 
 <p>Hi, I my name is Jeric Bryle Dy.
@@ -46,21 +46,31 @@ redirect_from:
 
 	<div class="section-content">
 		<form action="https://docs.google.com/spreadsheet/formResponse?formkey=dHJwOGMzeWxzYkYtdkJMdnRxdDctVmc6MA&amp;ifq" method="POST">
-			<div class="form-group">
-				<label for="entry_2">Name</label>
-				<input id="entry_2" type="text" name="entry.2.single" required class="form-control" />
+			<div>
+				<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+					<input class="mdl-textfield__input" type="text" id="entry_2" name="entry.2.single" />
+					<label class="mdl-textfield__label" for="entry_2">Name</label>
+				</div>
 			</div>
-			<div class="form-group">
-				<label for="entry_0">Email</label>
-				<input id="entry_0" type="text" name="entry.0.single" class="form-control" placeholder="blank if you don't expect a reply" />
+			<div>
+				<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+					<input class="mdl-textfield__input" type="text" id="entry_0" name="entry.0.single" />
+					<label class="mdl-textfield__label" for="entry_0">Email</label>
+				</div>
 			</div>
-			<div class="form-group">
-				<label for="entry_1">Message</label>
-				<textarea id="entry_1" name="entry.1.single" rows="8" cols="75" required class="form-control"></textarea>
+			<div>
+				<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+					<textarea class="mdl-textfield__input" type="text" rows="8" cols="75" id="entry_1" name="entry.1.single" ></textarea>
+					<label class="mdl-textfield__label" for="entry_1">Message</label>
+				</div>
 			</div>
 			<input type="hidden" name="pageNumber" value="0" />
 			<input type="hidden" name="backupCache" value="" />
-			<button type="submit" class="btn btn-default">Submit</button>
+			<div>
+				<button class="mdl-button mdl-js-button mdl-button--primary mdl-js-ripple-effect">
+					Submit
+				</button>
+			</div>
 		</form>
 	</div>
 
