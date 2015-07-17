@@ -7,7 +7,7 @@
 	{% capture next_year %}{{ next_entry.date | date: "%Y" }}{% endcapture %}
 
 	{% if forloop.first %}
-		<table class="mdl-data-table mdl-js-data-table mdl-shadow--2dp stretch-out">
+		<table class="mdl-data-table mdl-js-data-table mdl-shadow--2dp stretch-out item-spacer">
 			<thead>
 				<th colspan="2">
 					{{ cur_year }}
@@ -47,7 +47,7 @@
 		{% if cur_year != next_year %}
 				</tbody>
 			</table>
-			<table class="mdl-data-table mdl-js-data-table mdl-shadow--2dp stretch-out">
+			<table class="mdl-data-table mdl-js-data-table mdl-shadow--2dp stretch-out item-spacer">
 				<thead>
 					<th colspan="2">
 						{{ next_year }}
