@@ -1,38 +1,12 @@
-var banner_width = 782;
-var avatar_frame_left = banner_width - 250;
-var avatar_frame_top = 17;
+var banner_width = 135;
+var avatar_frame_left = 0;
+var avatar_frame_top = 0;
 var avatar_frame_width = 132;
 var avatar_frame_height = 175;
 var avatar_img_left = avatar_frame_left + 10;
 var avatar_img_top = avatar_frame_top + 10;
 var avatar_img_width = 112;
 var avatar_img_height = 137;
-
-function setNewBirdCoord(params) {
-	params.bird.x = params.headerBg.width + Math.random() * 300 + 700;
-	params.bird.y = params.headerBg.height / 2 + params.headerBg.height / 3 * Math.sin(Math.random() * 2 * Math.PI);
-}
-
-function renderBg(params) {
-	var excessWidth = params.headerBg.width - banner_width;
-	var excessWidthHalf = excessWidth / 2;
-	var bgOffset = excessWidthHalf * Math.cos(params.headerBgAngle) - excessWidthHalf;
-	params.bannerContext.drawImage(params.headerBg, bgOffset, 0);
-	params.headerBgAngle += 0.005;
-
-	params.bannerContext.drawImage(params.robin, Math.floor(params.bird.curIndex)*24, 0, 24, 31, params.bird.x + bgOffset, params.bird.y, 16, 20);
-	params.bird.curIndex = (params.bird.curIndex + 0.5) % 22;
-	params.bird.x -= 1.5;
-	if (params.bird.x <= -100) {
-		setNewBirdCoord(params);
-	}
-}
-
-function renderName(params) {
-	params.bannerContext.font = "30px Geneva, Arial, Helvetica, sans-serif";
-	params.bannerContext.fillStyle = "#cdf";
-	params.bannerContext.fillText("Jeric Bryle Dy", 15, 190);
-}
 
 function renderAvatar(params) {
 	var rWidth;
@@ -78,8 +52,6 @@ function renderAvatar(params) {
 }
 
 function onRender(params) {
-	renderBg(params);
-	renderName(params);
 	renderAvatar(params);
 
 	setTimeout(function() {onRender(params);}, 33);
@@ -110,7 +82,7 @@ function onCreepBrowStart(params) {
 }
 
 function onCreepBrowDone(params) {
-	setTimeout(function() {onCreepEyeStart(params);}, Math.ceil(Math.random() * 30000) + 10000);
+	setTimeout(function() {onCreepEyeStart(params);}, Math.ceil(Math.random() * 2000) + 5000);
 }
 
 function onCreepBrowRender(params) {
@@ -128,8 +100,6 @@ $(document).ready(function() {
 	var browsImg = new Image();
 	var creepMaskImg = new Image();
 	var creepEyeImg = new Image();
-	var headerBg = new Image();
-	var robin = new Image();
 
 	var mouse = new Object();
 	var avatarCenter = new Object();
@@ -147,17 +117,9 @@ $(document).ready(function() {
 	params.browsImg = browsImg;
 	params.creepMaskImg = creepMaskImg;
 	params.creepEyeImg = creepEyeImg;
-	params.headerBg = headerBg;
-	params.robin = robin;
 
 	params.browLife = 0;
 	params.eyeLife = 0;
-	params.headerBgAngle = Math.PI;
-
-	params.bird = {x: 10000, y: 10000, curIndex: 0};
-	headerBg.onload = function() {
-		setNewBirdCoord(params);
-	};
 
 	avatarImg.src = "/images/ani-banner/avatar.png";
 	avatarBgImg.src = "/images/ani-banner/avatar_bg.png";
@@ -165,8 +127,6 @@ $(document).ready(function() {
 	browsImg.src = "/images/ani-banner/brows.png";
 	creepMaskImg.src = "/images/ani-banner/mask.png";
 	creepEyeImg.src = "/images/ani-banner/eye.png";
-	headerBg.src = "/images/ani-banner/sky.jpg";
-	robin.src = "/images/ani-banner/robin_small.png";
 
 	$(document).mousemove(function(e) {
 		mouse.x = e.pageX;
@@ -178,5 +138,5 @@ $(document).ready(function() {
 	});
 
 	setTimeout(function() {onRender(params);}, 33);
-	setTimeout(function() {onCreepEyeStart(params);}, Math.ceil(Math.random() * 30000) + 10000);
+	setTimeout(function() {onCreepEyeStart(params);}, Math.ceil(Math.random() * 2000) + 5000);
 });
