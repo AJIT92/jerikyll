@@ -308,3 +308,12 @@ pre {
 .mdl-layout__header .mdl-layout__drawer-button  {
 	color: $text-color;
 }
+
+.img-responsive {
+	max-height: 600px;
+}
+
+.image-zoom {
+	display: block;
+	text-align: center;
+}
