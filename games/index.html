@@ -3,35 +3,54 @@ layout: page
 title: Games
 permalink: /games/
 additional:
-    css: /css/games.css
-    js: /js/games.js
+    css:
+        - /css/games.css
+        - /css/owl-carousel/owl.carousel.css
+        - /css/owl-carousel/owl.theme.css
+    js:
+        - /js/owl-carousel/owl.carousel.min.js
 
 redirect_from: "/jerigames/"
 ---
 
 <div class="home">
 
-	<div class="item-spacer">
-		<h1 class="page-heading">Game selection!</h1>
-		<div id="gameSelect" class="carousel slide" data-ride="carousel" data-interval="false">
-			<div class="carousel-inner">
-				{% for game in site.data.games %}
-				<div class="item{% if forloop.index == 1 %} active{% endif %}" data-link="{{ game.link | prepend: site.baseurl }}" data-info="{{ game.info | xml_escape }}" data-img-arr='{{ game.imgArr | jsonify }}'>
-					<div class="selection-title"><a href="{{ game.link | prepend: site.baseurl }}">{{ game.title }}</a></div>
+	<div>
+		{% for game in site.data.games %}
+			<div class="mdl-card mdl-shadow--2dp stretch-out no-min-height item-spacer">
+				<div class="mdl-card__title">
+					<h2 class="mdl-card__title-text">{{ game.title }}</h2>
 				</div>
-				{% endfor %}
+				<div class="mdl-card__supporting-text">
+					<div id="game{{ forloop.index }}-screenshots" class="owl-carousel">
+						{% for img in game.imgArr %}
+							<div class="item">
+								<a class="image-zoom" href="{{ img }}">
+									<div class="screenshot-thumbnail">
+										<img src="{{ img }}" alt="screenshot">
+									</div>
+								</a>
+							</div>
+						{% endfor %}
+					</div>
+					<script>
+						$("#game{{ forloop.index }}-screenshots").owlCarousel({
+							items: 3,
+							itemsDesktop: [1199, 3],
+							itemsDesktopSmall: [979, 3],
+							itemsTablet: [768, 2],
+							itemsMobile : [479, 1]
+						});
+					</script>
+				</div>
+				<div class="mdl-card__supporting-text">
+					{{ game.info }}
+				</div>
+				<div class="mdl-card__actions mdl-card--border">
+					<a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" href="{{ game.link | prepend: site.baseurl }}">
+						Read More
+					</a>
+				</div>
 			</div>
-			<a class="left carousel-control clean-navi" href="#gameSelect" role="button" data-slide="prev"><span class="glyphicon glyphicon-chevron-left"></span></a>
-			<a class="right carousel-control clean-navi" href="#gameSelect" role="button" data-slide="next"><span class="glyphicon glyphicon-chevron-right"></span></a>
-		</div>
+		{% endfor %}
 	</div>
-	<div class="item-spacer">
-		<h1 class="page-heading">Information</h1>
-		<div id="game-info"></div>
-	</div>
-	<div class="item-spacer">
-		<h1 class="page-heading">Screenshots</h1>
-		<div id="game-thumbs" class="container-fluid"></div>
-	</div>
-
-</div>
