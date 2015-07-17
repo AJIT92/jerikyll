@@ -18,10 +18,14 @@ redirect_from: "/jerigames/"
 	<div>
 		{% for game in site.data.games %}
 			<div class="mdl-card mdl-shadow--2dp stretch-out no-min-height item-spacer">
-				<div class="mdl-card__title">
-					<h2 class="mdl-card__title-text">{{ game.title }}</h2>
+				<div class="mdl-card__title game-title">
+					<a href="{{ game.link | prepend: site.baseurl }}">
+						<h2 class="mdl-card__title-text">
+								{{ game.title }}
+						</h2>
+					</a>
 				</div>
-				<div class="mdl-card__supporting-text">
+				<div>
 					<div id="game{{ forloop.index }}-screenshots" class="owl-carousel">
 						{% for img in game.imgArr %}
 							<div class="item">
@@ -39,7 +43,8 @@ redirect_from: "/jerigames/"
 							itemsDesktop: [1199, 3],
 							itemsDesktopSmall: [979, 3],
 							itemsTablet: [768, 2],
-							itemsMobile : [479, 1]
+							itemsMobile : [479, 1],
+							autoPlay: true
 						});
 					</script>
 				</div>

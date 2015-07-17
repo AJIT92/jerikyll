@@ -1,4 +1,12 @@
 
+.game-title {
+	display: block;
+}
+
+.game-title a {
+	color: #111;
+}
+
 .no-min-height {
 	min-height: 0px;
 }
