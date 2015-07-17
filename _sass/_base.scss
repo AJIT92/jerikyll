@@ -300,12 +300,14 @@ pre {
 	white-space: normal;
 }
 
-.mdl-layout__header {
+.mdl-layout__header,
+.mdl-mini-footer {
 	background-color: #eee;
 }
 
 .mdl-layout__header-row .mdl-navigation__link,
-.mdl-layout__header .mdl-layout__drawer-button  {
+.mdl-layout__header .mdl-layout__drawer-button,
+.mdl-logo {
 	color: $text-color;
 }
 
