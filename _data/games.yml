@@ -1,12 +1,18 @@
 - title: "Mega Man Legends: Operation Mother Lode"
   link: /games/rockmandashfangame/
   imgArr:
-    - /images/games/rockmandashfangame/hanmuru-front.png
-    - /images/games/rockmandashfangame/house.png
-    - /images/games/rockmandashfangame/fire-horokko.png
-    - /images/games/rockmandashfangame/rm-getting-up.png
-    - /images/games/rockmandashfangame/refractors.png
-    - /images/games/rockmandashfangame/servbot-happy.png
+    - full: /images/games/rockmandashfangame/hanmuru-front.png
+      thumbnail: /images/games/rockmandashfangame/thumbnails/y150/hanmuru-front.png
+    - full: /images/games/rockmandashfangame/house.png
+      thumbnail: /images/games/rockmandashfangame/thumbnails/y150/house.png
+    - full: /images/games/rockmandashfangame/fire-horokko.png
+      thumbnail: /images/games/rockmandashfangame/thumbnails/y150/fire-horokko.png
+    - full: /images/games/rockmandashfangame/rm-getting-up.png
+      thumbnail: /images/games/rockmandashfangame/thumbnails/y150/rm-getting-up.png
+    - full: /images/games/rockmandashfangame/refractors.png
+      thumbnail: /images/games/rockmandashfangame/thumbnails/y150/refractors.png
+    - full: /images/games/rockmandashfangame/servbot-happy.png
+      thumbnail: /images/games/rockmandashfangame/thumbnails/y150/servbot-happy.png
   info: |
     My first game using DirectX.
     I use <a href="http://www.blender.org/">Blender</a> to create and animate the 3D models.
@@ -15,12 +21,18 @@
 - title: Mega Man Legends (school project)
   link: /games/graphix/
   imgArr:
-    - /images/games/graphix/graphix-start.png
-    - /images/games/graphix/graphix-servbots.png
-    - /images/games/graphix/graphix-tanks.png
-    - /images/games/graphix/graphix-homing.png
-    - /images/games/graphix/graphix-tornado.png
-    - /images/games/graphix/graphix-lv3.png
+    - full: /images/games/graphix/graphix-start.png
+      thumbnail: /images/games/graphix/thumbnails/y150/graphix-start.png
+    - full: /images/games/graphix/graphix-servbots.png
+      thumbnail: /images/games/graphix/thumbnails/y150/graphix-servbots.png
+    - full: /images/games/graphix/graphix-tanks.png
+      thumbnail: /images/games/graphix/thumbnails/y150/graphix-tanks.png
+    - full: /images/games/graphix/graphix-homing.png
+      thumbnail: /images/games/graphix/thumbnails/y150/graphix-homing.png
+    - full: /images/games/graphix/graphix-tornado.png
+      thumbnail: /images/games/graphix/thumbnails/y150/graphix-tornado.png
+    - full: /images/games/graphix/graphix-lv3.png
+      thumbnail: /images/games/graphix/thumbnails/y150/graphix-lv3.png
   info: |
     My first game using OpenGL.
     It is for my computer graphics class in De La Salle University.
@@ -30,8 +42,10 @@
 - title: Sworld
   link: /games/sworld/
   imgArr:
-    - /images/games/sworld/sworld-menu.png
-    - /images/games/sworld/sworld-fight.png
+    - full: /images/games/sworld/sworld-menu.png
+      thumbnail: /images/games/sworld/thumbnails/y150/sworld-menu.png
+    - full: /images/games/sworld/sworld-fight.png
+      thumbnail: /images/games/sworld/thumbnails/y150/sworld-fight.png
   info: |
     My first game written in Java.
     I did not use any graphics library, everything is rendered with Java's Graphics2D and BufferedImage.

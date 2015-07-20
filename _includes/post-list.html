@@ -19,9 +19,9 @@
 	<tr>
 		<td class="mdl-data-table__cell--non-numeric thumbnail-cell">
 			{% if post.thumbnail %}
-				<a class="image-zoom" href="{{ post.thumbnail | prepend: site.baseurl }}">
+				<a class="image-zoom" href="{{ post.thumbnail.full | prepend: site.baseurl }}">
 					<div class="update-thumb">
-						<img src="{{ post.thumbnail | prepend: site.baseurl }}" />
+						<img src="{{ post.thumbnail.thumbnail | prepend: site.baseurl }}" />
 					</div>
 				</a>
 			{% else %}

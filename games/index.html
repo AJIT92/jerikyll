@@ -29,9 +29,9 @@ redirect_from: "/jerigames/"
 					<div id="game{{ forloop.index }}-screenshots" class="owl-carousel">
 						{% for img in game.imgArr %}
 							<div class="item">
-								<a class="image-zoom" href="{{ img }}">
+								<a class="image-zoom" href="{{ img.full }}">
 									<div class="screenshot-thumbnail">
-										<img src="{{ img }}" alt="screenshot">
+										<img src="{{ img.thumbnail }}" alt="screenshot">
 									</div>
 								</a>
 							</div>
