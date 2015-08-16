@@ -336,3 +336,18 @@ pre {
 	background-color: $brand-color;
 	color: #fff;
 }
+
+.spinner-container {
+	display: table;
+	margin: 0 auto;
+}
+
+.spinner-message {
+	display: table-cell;
+	vertical-align: middle;
+	padding-left: 10px;
+}
+
+.progress-bar-text {
+	text-align: center;
+}

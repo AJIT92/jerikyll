@@ -3,6 +3,7 @@ layout: page
 title: About
 permalink: /about/
 additional:
+    js: /js/about.js
     css: /css/about.css
 
 redirect_from:
@@ -45,30 +46,40 @@ redirect_from:
 	<div class="post-section">Contact</div>
 
 	<div class="section-content">
-		<form action="https://docs.google.com/spreadsheet/formResponse?formkey=dHJwOGMzeWxzYkYtdkJMdnRxdDctVmc6MA&amp;ifq" method="POST">
+		<form action="https://script.google.com/macros/s/AKfycbza3IvT3IVgU-_OTY3YsfVZZ56X5HgsJI207WqwMbF3II7ZnlI/exec" method="POST" method="POST" id="contact-us-form" target="_self" onsubmit="return onContactUsSubmit();">
 			<div>
 				<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-					<input class="mdl-textfield__input" type="text" id="entry_2" name="entry.2.single" />
-					<label class="mdl-textfield__label" for="entry_2">Name</label>
+					<input id="contact-name" class="mdl-textfield__input" type="text" name="name" />
+					<label class="mdl-textfield__label" for="name">Name</label>
 				</div>
 			</div>
 			<div>
 				<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-					<input class="mdl-textfield__input" type="text" id="entry_0" name="entry.0.single" />
-					<label class="mdl-textfield__label" for="entry_0">Email</label>
+					<input id="contact-email" class="mdl-textfield__input" type="text" name="email" />
+					<label class="mdl-textfield__label" for="email">Email</label>
 				</div>
 			</div>
 			<div>
 				<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label stretch-out">
-					<textarea class="mdl-textfield__input" rows="8" cols="75" id="entry_1" name="entry.1.single" ></textarea>
-					<label class="mdl-textfield__label" for="entry_1">Message</label>
+					<textarea id="contact-message" class="mdl-textfield__input" rows="8" cols="75" name="message" ></textarea>
+					<label class="mdl-textfield__label" for="message">Message</label>
 				</div>
 			</div>
-			<input type="hidden" name="pageNumber" value="0" />
-			<input type="hidden" name="backupCache" value="" />
-			<div>
-				<button class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
-					Submit
+			<div id="ajax-response">
+				<div id="contact-progress" class="spinner-container">
+					<div class="progress-bar-text">Sending...</div>
+					<div id="p2" class="mdl-progress mdl-js-progress mdl-progress__indeterminate progress-demo"></div>
+				</div>
+				<div id="contact-success" class="spinner-container">
+					<div><i class="material-icons">check</i></div><div class="spinner-message">Sent!</div>
+				</div>
+				<div id="contact-failed" class="spinner-container">
+					<div><i class="material-icons">close</i></div><div class="spinner-message">Sending failed. Try again.</div>
+				</div>
+			</div>
+			<div style="text-align: right;">
+				<button id="contact-send-btn" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
+					Send
 				</button>
 			</div>
 		</form>
