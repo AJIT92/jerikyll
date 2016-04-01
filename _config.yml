@@ -9,10 +9,26 @@ url: "http://www.jericdy.com" # the base hostname & protocol for your site
 
 # plugin configs
 mini_magick:
-  thumbnail:
+  blog-thumbnail-100x:
     source: images/blog
     destination: images/blog/thumbnails/100x
     resize: "100x"
+  games-graphix-thumbnail-x150:
+    source: images/games/graphix
+    destination: images/games/graphix/thumbnails/x150
+    resize: "x150"
+  games-rockmandashfangame-thumbnail-100x:
+    source: images/games/rockmandashfangame
+    destination: images/games/rockmandashfangame/thumbnails/100x
+    resize: "100x"
+  games-rockmandashfangame-thumbnail-x150:
+    source: images/games/rockmandashfangame
+    destination: images/games/rockmandashfangame/thumbnails/x150
+    resize: "x150"
+  games-sworld-thumbnail-x150:
+    source: images/games/sworld
+    destination: images/games/sworld/thumbnails/x150
+    resize: "x150"
 
 # Build settings
 markdown: kramdown
