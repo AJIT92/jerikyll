@@ -18,3 +18,7 @@ mini_magick:
 markdown: kramdown
 gems:
   - jekyll-redirect-from
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
