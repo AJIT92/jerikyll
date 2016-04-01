@@ -6,6 +6,7 @@ description: >
   or just bug him by sending him a message.
 baseurl: "" # the subpath of your site, e.g. /blog/
 url: "http://www.jericdy.com" # the base hostname & protocol for your site
+timezone: UTC
 
 # plugin configs
 mini_magick:
