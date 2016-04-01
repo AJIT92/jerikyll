@@ -13,6 +13,10 @@ mini_magick:
     source: images/blog
     destination: images/blog/thumbnails/100x
     resize: "100x"
+  blog-thumbnail-800x600:
+    source: images/blog
+    destination: images/blog/thumbnails/800x600
+    resize: "800x600"
   games-graphix-thumbnail-x150:
     source: images/games/graphix
     destination: images/games/graphix/thumbnails/x150
@@ -25,6 +29,14 @@ mini_magick:
     source: images/games/rockmandashfangame
     destination: images/games/rockmandashfangame/thumbnails/x150
     resize: "x150"
+  games-rockmandashfangame-thumbnail-400x300:
+    source: images/games/rockmandashfangame
+    destination: images/games/rockmandashfangame/thumbnails/400x300
+    resize: "400x300"
+  games-rockmandashfangame-thumbnail-800x600:
+    source: images/games/rockmandashfangame
+    destination: images/games/rockmandashfangame/thumbnails/800x600
+    resize: "800x600"
   games-sworld-thumbnail-x150:
     source: images/games/sworld
     destination: images/games/sworld/thumbnails/x150

@@ -38,18 +38,18 @@ redirect_from: /blog/2014/01/proper-way-to-use-full-screen-immersive.html
 	after calling that, you'll get:
 </p>
 
-{% include image.html caption="Sonic Dash" image_url="/images/blog/sonic-dash-ok.png" %}
+{% include image.html caption="Sonic Dash" image_path="/images/blog" image_thumbnail="800x600" image_file="sonic-dash-ok.png" %}
 
-{% include image.html caption="KitKat easter egg / day dream" image_url="/images/blog/kitkat-daydream-ok.png" %}
+{% include image.html caption="KitKat easter egg / day dream" image_path="/images/blog" image_thumbnail="800x600" image_file="kitkat-daydream-ok.png" %}
 
 <p>
 	now that we're in immersive mode, to bring up the navigation bar (back, home, recent apps buttons) we swipe up from the bottom of the screen.
 	Swipe down from the top of the screen when we want the status bar.
 </p>
 
-{% include image.html image_url="/images/blog/sonic-dash-navbar.png" %}
+{% include image.html image_path="/images/blog" image_thumbnail="800x600" image_file="sonic-dash-navbar.png" %}
 
-{% include image.html image_url="/images/blog/kitkat-daydream-navbar.png" %}
+{% include image.html image_path="/images/blog" image_thumbnail="800x600" image_file="kitkat-daydream-navbar.png" %}
 
 <p>
 	since the flag's name is <code>SYSTEM_UI_FLAG_IMMERSIVE_STICKY</code> you know, "sticky" it should return to immersive mode after some time.
@@ -61,17 +61,17 @@ redirect_from: /blog/2014/01/proper-way-to-use-full-screen-immersive.html
 	Unfortunately, the navigation bar also comes up.
 </p>
 
-{% include image.html image_url="/images/blog/sonic-dash-volume.png" %}
+{% include image.html image_path="/images/blog" image_thumbnail="800x600" image_file="sonic-dash-volume.png" %}
 
-{% include image.html image_url="/images/blog/kitkat-daydream-volume.png" %}
+{% include image.html image_path="/images/blog" image_thumbnail="800x600" image_file="kitkat-daydream-volume.png" %}
 
 <p>
 	You would think that it would return to full-screen immersive mode after some time since it's "sticky" but it won't.
 </p>
 
-{% include image.html image_url="/images/blog/sonic-dash-stuck.png" %}
+{% include image.html image_path="/images/blog" image_thumbnail="800x600" image_file="sonic-dash-stuck.png" %}
 
-{% include image.html image_url="/images/blog/kitkat-daydream-stuck.png" %}
+{% include image.html image_path="/images/blog" image_thumbnail="800x600" image_file="kitkat-daydream-stuck.png" %}
 
 <p>
 	Now this COULD be just a bug in Android. It might get fixed soon, but in the mean time here's a simple way to fix the problem.
