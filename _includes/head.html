@@ -7,8 +7,13 @@
 	<title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
 	<meta name="description" content="{{ site.description }}">
 
-	<link rel="shortcut icon" href="{{ "/favicon.ico" | prepend: site.baseurl }}" type="image/icon">
-	<link rel="icon" href="{{ "/favicon.ico" | prepend: site.baseurl }}" type="image/icon">
+	{% if page.manifest %}
+		<link rel="manifest" href="{{ page.manifest }}">
+	{% else %}
+		<link rel="manifest" href="/webapp/default-manifest.json">
+	{% endif %}
+	<link rel="shortcut icon" href="{{ "/images/icons/jd/favicon128.png" | prepend: site.baseurl }}" type="image/png">
+	<link rel="icon" href="{{ "/images/icons/jd/favicon128.png" | prepend: site.baseurl }}" type="image/png">
 	{% if page.rss %}
 		<link rel="alternate" type="application/rss+xml" title="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}" href="{{ page.rss }}" />
 	{% endif %}
