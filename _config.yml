@@ -1,9 +1,5 @@
 # Site settings
 title: Jeric Bryle Dy
-description: >
-  This is Jeric Bryle Dy's Personal Site.
-  Here, you can browse his games, check his publications
-  or just bug him by sending him a message.
 baseurl: "" # the subpath of your site, e.g. /blog/
 url: "http://www.jericdy.com" # the base hostname & protocol for your site
 timezone: UTC
