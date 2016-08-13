@@ -1,5 +1,5 @@
 
-$(document).ready(function() {
+$(document).ready(function () {
 	var postTimestamp = $("#post-timestamp");
 	if (postTimestamp.length === 1) {
 		var months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
@@ -10,3 +10,9 @@ $(document).ready(function() {
 		postTimestamp.attr("title", utcDate);
 	}
 });
+
+function showOldComments() {
+	$("#disqus-comments").hide();
+	$("#blogger-comments-option").hide();
+	$("#blogger-comments").show();
+}

@@ -2,6 +2,7 @@
 layout: default
 additional:
     js: /js/post.js
+blogger-timestamp: 2016-01-01 00:00:00 +0000
 
 ---
 <div itemscope itemtype="http://schema.org/Blog" class="post">
@@ -25,15 +26,22 @@ additional:
 	<article class="post-content">
 		{{ content }}
 	</article>
-	<div class="g-comments"
-		{% if page.comment_url %}
-			data-href="{{ page.comment_url }}"
-		{% else %}
-			data-href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}"
-		{% endif %}
-		data-width="642"
-		data-first_party_property="BLOGGER"
-		data-view_type="FILTERED_POSTMOD">
+
+	<div id="disqus-comments">
+		{% include comments/disqus.html %}
 	</div>
+
+	{% if page.date < layout.blogger-timestamp %}
+		<div id="blogger-comments-option">
+			<center>
+				<button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" onclick="showOldComments();">
+					See ancient comments
+				</button>
+			</center>
+		</div>
+		<div id="blogger-comments" style="display: none;">
+			{% include comments/blogger.html %}
+		</div>
+	{% endif %}
 
 </div>
