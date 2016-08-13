@@ -1,0 +1,68 @@
+---
+layout: post
+title: Migrating Comments
+date: 2016-08-13 14:30:00
+categories: blog
+thumbnail:
+    thumbnail: /images/blog/thumbnails/100x/disqus-comments.jpg
+    full: /images/blog/disqus-comments.jpg
+
+---
+
+<p>
+	I have decided to migrate my comments section from Blogger's to Disqus's.
+	I also wanted to preserve all my previous comments,
+		so I've placed a button to at the bottom of the page to show the Blogger comments.
+	If I do this to all post, even my new posts will have a Blogger comment option.
+	So I've set a date, say January 1, 2016,
+		everything before the said date will have the button appear.
+</p>
+
+<p>
+	I soon realized I can't compare the page's timestamp to a hard-coded timestamp
+</p>
+
+{% highlight liquid %}
+{% raw %}
+{% if page.date < "2016-01-01 00:00:00 +0000" %}
+    ...stuff...
+{% endif %}
+{% endraw %}
+{% endhighlight %}
+
+<p>
+	I have tried every possible permutation even ISO format.
+	I always end up with the error:
+</p>
+
+{% highlight properties %}
+Liquid Exception: Liquid error (line 27): comparison of Time with Liquid::Token failed in _layouts/post.html error:
+Error: Liquid error (line 27): comparison of Time with Liquid::Token failed
+Error: Run jekyll build --trace for more information.
+{% endhighlight %}
+
+<p>
+	It turns out, I should have assigned the timestamp to a page variable before comparing it.
+	This way, jekyll will cast it as a timestamp instead of string.
+</p>
+
+{% highlight liquid %}
+{% raw %}
+blogger-timestamp: 2016-01-01 00:00:00 +0000
+---
+{% if page.date < blogger-timestamp %}
+    ...stuff...
+{% endif %}
+{% endraw %}
+{% endhighlight %}
+
+{% include image.html image_path="/images/blog" image_thumbnail="800x600" image_file="disqus-comments.jpg" caption="Option to show old comments at the bottom" %}
+
+{% include image.html image_path="/images/blog" image_thumbnail="800x600" image_file="blogger-comments.jpg" caption="Blogger comments from my <a href='/blog/2015/01/04/3d-printer.html'>3D Printer post</a>" %}
+
+<p>
+	I initially hard-coded it just to do a quick test,
+		but ended up spending about an hour trying to figure out how to compare timestamps in Jekyll.
+	Only to realize it's because I am comparing a timestamp to a string!.
+	Oh well, all's well that ends well, I guess.
+</p>
