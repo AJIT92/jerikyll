@@ -25,19 +25,19 @@
 
 	<link rel="stylesheet" href="{{ "/css/magnific-popup.css" | prepend: site.baseurl }}">
 	<link rel="stylesheet" href="{{ "/css/main.css" | prepend: site.baseurl }}">
-	{% for css in page.additional.css %}
+	{% for css in layout.additional.css %}
 		<link rel="stylesheet" href="{{ css | prepend: site.baseurl }}">
 	{% endfor %}
-	{% for css in layout.additional.css %}
+	{% for css in page.additional.css %}
 		<link rel="stylesheet" href="{{ css | prepend: site.baseurl }}">
 	{% endfor %}
 	<script type="text/javascript" src="{{ "/js/jquery-2.1.1.min.js" | prepend: site.baseurl }}"></script>
 	<script type="text/javascript" src="{{ "/js/jquery.magnific-popup.min.js" | prepend: site.baseurl }}"></script>
 	<script type="text/javascript" src="{{ "/js/main.js" | prepend: site.baseurl }}"></script>
-	{% for js in page.additional.js %}
+	{% for js in layout.additional.js %}
 		<script type="text/javascript" src="{{ js | prepend: site.baseurl }}"></script>
 	{% endfor %}
-	{% for js in layout.additional.js %}
+	{% for js in page.additional.js %}
 		<script type="text/javascript" src="{{ js | prepend: site.baseurl }}"></script>
 	{% endfor %}
 	<!-- social plugins -->
