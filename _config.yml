@@ -1,5 +1,5 @@
 # Site settings
-title: Jeric Bryle Dy
+title: Jeric Dy
 baseurl: "" # the subpath of your site, e.g. /blog/
 url: "http://www.jericdy.com" # the base hostname & protocol for your site [will turn into http://localhost:4000 when using jekyll serve, see: https://jekyllrb.com/news/2016/10/06/jekyll-3-3-is-here/#siteurl-is-set-by-the-development-server]
 production_url: "http://www.jericdy.com"
