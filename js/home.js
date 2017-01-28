@@ -10,22 +10,22 @@ var avatar_img_height = 137;
 
 function renderAvatar(params) {
 	var rWidth;
-	params.bannerContext.fillStyle = "#fff";
-	params.bannerContext.fillRect(avatar_frame_left, avatar_frame_top, avatar_frame_width, avatar_frame_height);
+	params.photoContext.fillStyle = "#fff";
+	params.photoContext.fillRect(avatar_frame_left, avatar_frame_top, avatar_frame_width, avatar_frame_height);
 	rWidth = Math.min(avatar_img_width, params.avatarBgImg.width+params.bgX);
-	params.bannerContext.drawImage(params.avatarBgImg, -params.bgX, 0, rWidth, avatar_img_height, avatar_img_left, avatar_img_top, rWidth, avatar_img_height);
+	params.photoContext.drawImage(params.avatarBgImg, -params.bgX, 0, rWidth, avatar_img_height, avatar_img_left, avatar_img_top, rWidth, avatar_img_height);
 	if (params.bgX < params.avatarImg.width - params.avatarBgImg.width) {
 		rWidth = avatar_img_width-params.avatarBgImg.width-params.bgX;
-		params.bannerContext.drawImage(params.avatarBgImg, 0, 0, rWidth, avatar_img_height, avatar_img_left + avatar_img_width - rWidth, avatar_img_top, rWidth, avatar_img_height);
+		params.photoContext.drawImage(params.avatarBgImg, 0, 0, rWidth, avatar_img_height, avatar_img_left + avatar_img_width - rWidth, avatar_img_top, rWidth, avatar_img_height);
 	}
 
 	rWidth = Math.min(avatar_img_width, params.equationImg.width+params.bgEqX);
-	params.bannerContext.drawImage(params.equationImg, -params.bgEqX, 0, rWidth, avatar_img_height, avatar_img_left, avatar_img_top + 20, rWidth, avatar_img_height - 20);
+	params.photoContext.drawImage(params.equationImg, -params.bgEqX, 0, rWidth, avatar_img_height, avatar_img_left, avatar_img_top + 20, rWidth, avatar_img_height - 20);
 	if (params.bgEqX < params.avatarImg.width - params.equationImg.width) {
 		rWidth = avatar_img_width-params.equationImg.width-params.bgEqX;
-		params.bannerContext.drawImage(params.equationImg, 0, 0, rWidth, avatar_img_height, avatar_img_left + avatar_img_width - rWidth, avatar_img_top + 20, rWidth, avatar_img_height - 20);
+		params.photoContext.drawImage(params.equationImg, 0, 0, rWidth, avatar_img_height, avatar_img_left + avatar_img_width - rWidth, avatar_img_top + 20, rWidth, avatar_img_height - 20);
 	}
-	params.bannerContext.drawImage(params.avatarImg, avatar_img_left, avatar_img_top);
+	params.photoContext.drawImage(params.avatarImg, avatar_img_left, avatar_img_top);
 
 	params.bgX -= 1;
 	if (params.bgX <= -params.avatarBgImg.width) {
@@ -73,8 +73,8 @@ function onCreepEyeRender(params) {
 	var translateRatio = Math.min(1, mDist / 50.0);
 	var eyeDx = translateRatio * 2.5 * Math.cos(mAngle);
 	var eyeDy = 1 + translateRatio * 2 * Math.sin(mAngle);
-	params.bannerContext.drawImage(params.creepEyeImg, avatar_img_left + eyeDx, avatar_img_top + eyeDy);
-	params.bannerContext.drawImage(params.creepMaskImg, avatar_img_left, avatar_img_top);
+	params.photoContext.drawImage(params.creepEyeImg, avatar_img_left + eyeDx, avatar_img_top + eyeDy);
+	params.photoContext.drawImage(params.creepMaskImg, avatar_img_left, avatar_img_top);
 }
 
 function onCreepBrowStart(params) {
@@ -86,14 +86,14 @@ function onCreepBrowDone(params) {
 }
 
 function onCreepBrowRender(params) {
-	params.bannerContext.drawImage(params.browsImg, avatar_img_left, avatar_img_top);
+	params.photoContext.drawImage(params.browsImg, avatar_img_left, avatar_img_top);
 }
 
 $(document).ready(function() {
 	var params = new Object();
 
-	var header_banner = document.getElementById("header_banner");
-	var bannerContext = header_banner.getContext("2d");
+	var photoCanvas = $("#photo-canvas");
+	var photoContext = photoCanvas[0].getContext("2d");
 	var avatarImg = new Image();
 	var avatarBgImg = new Image();
 	var equationImg = new Image();
@@ -110,7 +110,7 @@ $(document).ready(function() {
 	params.avatarCenter = avatarCenter;
 	params.bgX = 0;
 	params.bgEqX = 0;
-	params.bannerContext = bannerContext;
+	params.photoContext = photoContext;
 	params.avatarImg = avatarImg;
 	params.avatarBgImg = avatarBgImg;
 	params.equationImg = equationImg;
@@ -132,7 +132,7 @@ $(document).ready(function() {
 		mouse.x = e.pageX;
 		mouse.y = e.pageY;
 
-		var canvasPos = $("#header_banner").position();
+		var canvasPos = photoCanvas.position();
 		avatarCenter.x = canvasPos.left + avatar_img_left + 56;
 		avatarCenter.y = canvasPos.top + avatar_img_top + 61;
 	});

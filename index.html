@@ -2,20 +2,18 @@
 layout: default
 permalink: /
 additional:
-    css: /css/ani-banner.css
-    js: /js/ani-banner.js
+  css: /css/home.css
+  js: /js/home.js
 
 redirect_from: "/home/"
 ---
 
-<div class="home">
+<div class="home-banner">
 
-	<canvas style="box-shadow: 0 2px 2px 0 rgba(0,0,0,.14),0 3px 1px -2px rgba(0,0,0,.2),0 1px 5px 0 rgba(0,0,0,.12);" id="header_banner" width="132" height="175"></canvas>
+	<canvas id="photo-canvas" class="photo-canvas" width="132" height="175"></canvas>
 
-	<div>
-		<p>Hello! The site just recently migrated from Google Sites. Woohoo <a href="https://github.com/">GitHub</a> and <a href="http://jekyllrb.com/">Jekyll</a>!</p>
-		
-		<p>Have a look at the <a href="{{ "/games/" | prepend: site.baseurl }}">games</a> section while I do something else.</p>
+	<div class="name-banner">
+		<div class="name-title">Jeric Bryle Dy</div>
 	</div>
 
 </div>
