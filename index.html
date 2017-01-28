@@ -17,3 +17,40 @@ redirect_from: "/home/"
 	</div>
 
 </div>
+
+<table class="mdl-data-table mdl-js-data-table mdl-shadow--2dp stretch-out item-spacer">
+	<thead>
+		<th colspan="2">
+			Featured Items
+		</th>
+	</thead>
+	<tbody>
+		{% for featured in site.data.featured limit:5 %}
+			{% assign post = site.posts | where:"id", featured.id | first %}
+
+			<tr>
+				<td class="mdl-data-table__cell--non-numeric thumbnail-cell">
+					{% if post.thumbnail %}
+						<a class="image-zoom" href="{{ post.thumbnail.full | prepend: site.baseurl }}">
+							<div class="update-thumb">
+								<img src="{{ post.thumbnail.thumbnail | prepend: site.baseurl }}" />
+							</div>
+						</a>
+					{% else %}
+						<a href="{{ post.url | prepend: site.baseurl }}">
+							<div class="update-thumb"></div>
+						</a>
+					{% endif %}
+				</td>
+				<td class="mdl-data-table__cell--non-numeric">
+					<a class="update-item" href="{{ post.url | prepend: site.baseurl }}">
+						<div>
+							<div class="update-title">{{ post.title }}</div>
+							<div class="update-meta">{{ post.date | date: "%b %-d, %Y" }}</div>
+						</div>
+					</a>
+				</td>
+			</tr>
+		{% endfor %}
+	</tbody>
+</table>
