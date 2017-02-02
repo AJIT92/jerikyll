@@ -5,14 +5,16 @@ additional:
 blogger-timestamp: 2016-01-01 00:00:00 +0000
 
 ---
-<div itemscope itemtype="http://schema.org/Blog" class="post">
+<div itemscope itemtype="http://schema.org/Article" class="post">
 
 	<meta itemprop="image" content="{{ page.thumbnail.full | prepend: site.url }}" />
-	<meta itemprop="thumbnailUrl" content="{{ page.thumbnail.full | prepend: site.url }}" />
+	<meta itemprop="thumbnailUrl" content="{{ page.thumbnail.thumbnail | prepend: site.url }}" />
 	<header class="post-header">
-		<h1 itemprop="name" class="post-title">{{ page.title }}</h1>
+		<h1 itemprop="headline" class="post-title">{{ page.title }}</h1>
 		<p class="post-meta">
 			<meta itemprop="datePublished" content="{{ page.date | date_to_xmlschema }}" />
+			<meta itemprop="dateCreated" content="{{ page.date | date_to_xmlschema }}" />
+			<meta itemprop="dateModified" content="{{ page.date | date_to_xmlschema }}" />
 			<span id="post-timestamp">{{ page.date | date: "%B %-d, %Y" }}</span>
 			•
 			<span itemscope itemprop="author" itemtype="http://schema.org/Person">
@@ -23,7 +25,7 @@ blogger-timestamp: 2016-01-01 00:00:00 +0000
 		</p>
 	</header>
 
-	<article class="post-content">
+	<article itemprop="articleBody" class="post-content">
 		{{ content }}
 	</article>
 
