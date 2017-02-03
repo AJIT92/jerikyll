@@ -12,7 +12,37 @@ additional:
 
 redirect_from: "/jerigames/"
 ---
-
+<script type="application/ld+json">
+	{
+		"@context": "http://schema.org",
+		"@type": "Blog",
+		"mainEntityOfPage": "{{ site.url }}",
+		"headline": "Games",
+		"description": "Games by Jeric",
+		"author": {
+			"@type": "Person",
+			"name": "Jeric Bryle Dy",
+			"givenName": "Jeric Bryle",
+			"familyName": "Dy"
+		},
+		"publisher": {
+			"@type": "Organization",
+			"name": "Jeric Bryle Dy",
+			"logo": {
+				"@type": "ImageObject",
+				"url": "{{ "/images/icons/jd/favicon256.png" | prepend: site.url }}",
+				"width": "256px",
+				"height": "256px"
+			}
+		},
+		"image": {
+			"@type": "ImageObject",
+			"url": "{{ "/images/jeric-logo-small.png" | prepend: site.url }}",
+			"width": "146px",
+			"height": "64px"
+		}
+	}
+</script>
 <div class="home">
 
 	<div>
