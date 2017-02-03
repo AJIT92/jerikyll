@@ -6,11 +6,43 @@ permalink: /blog/
 rss: feed.xml
 ---
 
+<script type="application/ld+json">
+	{
+		"@context": "http://schema.org",
+		"@type": "Blog",
+		"mainEntityOfPage": "{{ site.url }}",
+		"headline": "Blog",
+		"description": "Welcome to my blog. Here, I talk about my life and hobbies.",
+		"author": {
+			"@type": "Person",
+			"name": "Jeric Bryle Dy",
+			"givenName": "Jeric Bryle",
+			"familyName": "Dy"
+		},
+		"publisher": {
+			"@type": "Organization",
+			"name": "Jeric Bryle Dy",
+			"logo": {
+				"@type": "ImageObject",
+				"url": "{{ "/images/icons/jd/favicon256.png" | prepend: site.url }}",
+				"width": "256px",
+				"height": "256px"
+			}
+		},
+		"image": {
+			"@type": "ImageObject",
+			"url": "{{ "/images/jeric-logo-small.png" | prepend: site.url }}",
+			"width": "146px",
+			"height": "64px"
+		}
+	}
+</script>
+
 <div class="home">
 	<div>
 		<div>
 			<p>
-				Welcome to my blog section.
+				Welcome to my blog.
 				Here, I talk about my life and hobbies.
 			</p>
 		</div>
