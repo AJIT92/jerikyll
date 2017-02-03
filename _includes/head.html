@@ -4,6 +4,13 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="theme-color" content="#2a7ae2">
 
+	<meta property="og:title" content="{% if page.og.title %}{{ page.og.title }}{% elsif page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}" />
+	<meta property="og:url" content="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.production_url }}" />
+	<meta property="og:type" content="{% if page.og.type %}{{ page.og.type }}{% else %}website{% endif %}" />
+	{% if page.thumbnail.full %}
+		<meta property="og:image" content="{{ page.thumbnail.full | prepend: site.url }}" />
+	{% endif %}
+
 	<title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
 
 	{% if page.manifest %}
