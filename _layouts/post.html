@@ -6,10 +6,13 @@ blogger-timestamp: 2016-01-01 00:00:00 +0000
 
 ---
 
+{% capture parent_path %}{{ site.url }}/{% for category in page.categories %}{{ category }}/{% endfor %}{% endcapture %}
+
 <script type="application/ld+json">
 	{
 		"@context": "http://schema.org",
 		"@type": "Article",
+		"mainEntityOfPage": "{{ parent_path }}",
 		"headline": "{{ page.title }}",
 		"datePublished": "{{ page.date | date_to_xmlschema }}",
 		"dateCreated": "{{ page.date | date_to_xmlschema }}",
@@ -25,7 +28,7 @@ blogger-timestamp: 2016-01-01 00:00:00 +0000
 			"name": "Jeric Bryle Dy",
 			"logo": {
 				"@type": "ImageObject",
-				"url": "{{ '/images/icons/jd/favicon256.png' | prepend: site.url }}",
+				"url": "{{ "/images/icons/jd/favicon256.png" | prepend: site.url }}",
 				"width": "256px",
 				"height": "256px"
 			}
