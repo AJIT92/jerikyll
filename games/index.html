@@ -2,6 +2,8 @@
 layout: page
 title: Games
 permalink: /games/
+thumbnail:
+    full: /images/games/rockmandashfangame/mml-008-ferdinand.png
 additional:
     css:
         - /css/games.css
@@ -37,7 +39,7 @@ redirect_from: "/jerigames/"
 		},
 		"image": {
 			"@type": "ImageObject",
-			"url": "{{ "/images/games/rockmandashfangame/mml-008-ferdinand.png" | prepend: site.url }}",
+			"url": "{{ page.thumbnail.full | prepend: site.url }}",
 			"width": "1920px",
 			"height": "1080px"
 		}

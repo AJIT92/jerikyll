@@ -2,6 +2,8 @@
 layout: page
 title: "Blog"
 permalink: /blog/
+thumbnail:
+    full: /images/jeric-logo-small.png
 
 rss: feed.xml
 ---
@@ -31,7 +33,7 @@ rss: feed.xml
 		},
 		"image": {
 			"@type": "ImageObject",
-			"url": "{{ "/images/jeric-logo-small.png" | prepend: site.url }}",
+			"url": "{{ page.thumbnail.full | prepend: site.url }}",
 			"width": "146px",
 			"height": "64px"
 		}

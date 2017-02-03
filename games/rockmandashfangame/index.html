@@ -2,6 +2,8 @@
 layout: page
 title: "Mega Man Legends: Operation Mother Lode"
 permalink: /games/rockmandashfangame/
+thumbnail:
+    full: /images/games/rockmandashfangame/mml-008-ferdinand.png
 
 video: videoseries?list=PLDDE357530387535D
 rss: feed.xml
@@ -34,7 +36,7 @@ redirect_from: "/jerigames/rockmandashfangame/"
 		},
 		"image": {
 			"@type": "ImageObject",
-			"url": "{{ "/images/games/rockmandashfangame/mml-008-ferdinand.png" | prepend: site.url }}",
+			"url": "{{ page.thumbnail.full | prepend: site.url }}",
 			"width": "1920px",
 			"height": "1080px"
 		}
